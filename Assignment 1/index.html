@@ -1,0 +1,101 @@
+
+<!-- saved from url=(0055)http://www.cse.iitb.ac.in/~harikatam/cs475/assignment1/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>CS475</title>
+		<link rel="icon" type="image/PNG" href="http://www.cse.iitb.ac.in/~harikatam/cs475/assignment1/images/fevicon.jpg">
+	<style type="text/css"></style></head><body style="margin-left: 120px; margin-top: 40px; margin-right: 120px;">
+		<h1><center>Computer Graphics cs475</center></h1>
+		<h2><center>Assignment 1 report</center></h2>
+	    <div>
+	    	<h3>Team members</h3>	
+	    	<ul>
+	    		<li><a href="https://www.facebook.com/harinandan.teja">Harinandan Teja</a> 120050066</li>
+	    		<li><a href="https://www.facebook.com/nishanth.rumandla.77">Nishanth Rumandla</a> 120050064</li>
+	    	</ul>
+	    </div>
+
+	    <div>
+	    	<h3>Content</h3>
+	    	<ul>
+	    		<li><a href="http://www.cse.iitb.ac.in/~harikatam/cs475/assignment1/#models">Models created</a></li>
+	    		<li><a href="http://www.cse.iitb.ac.in/~harikatam/cs475/assignment1/#modelling">How modelling mode works</a></li>
+	    		<li><a href="http://www.cse.iitb.ac.in/~harikatam/cs475/assignment1/#inspection">How inspection works</a></li>
+	    		<li><a href="http://www.cse.iitb.ac.in/~harikatam/cs475/assignment1/#new_functions">New functions used</a></li>
+	    		<li><a href="http://www.cse.iitb.ac.in/~harikatam/cs475/assignment1/#assumption">Assumptions</a></li>
+	    	</ul>
+	    </div>
+
+	    <div id="models">
+	    	<h3>Models created</h3>
+	    	<p><font size="4">As part of this assignment we tried to create an elephant , a torus or a donut , an igloo and a fan. All the models are created using triangles. The vertices are curated by hand and some using scripts. The raw files for the objects have been named as elephant.raw, torus.raw, igloo.raw, fan.raw. The following are the screenshots of the models created using openGL4.</font></p>
+	    	<img src="./index_files/elephant.jpg">
+	    	<img src="./index_files/torus.jpg">
+	    	<img src="./index_files/fan.jpg">
+	    	<img src="./index_files/igloo.jpg">
+	    </div>
+
+	    <div id="modelling">
+	    	<h3>How modelling mode works</h3>
+	    	<p><font size="3.5">The program is by default set in modelling mode. You can start creating your model by clicking <b>"left mouse button"</b> on the screen to add vertices. You see nothing till you add the 3rd vertex. You can remove the last added point by pressing <b>"shift + left mouse button"</b>. You can save the file by pressing <b>"K key"</b> and entering the name in the teminal. You can also load a raw file by pressing <b>"L key"</b> and entering the file name in the terminal. When you load a object the mode is set to modelling by default.</font></p>
+	    	<ul>
+	    		<h4>Key controls</h4>
+	    		<li>Left mouse click to add a point to your model</li>
+	    		<li>Shift + left mouse click to remove last added point in your model</li>
+	    		<li>K key to save the model into a raw file</li>
+	    		<li>L key to load a raw file</li>
+	    		<li>I key to change mode to inspection mode</li>
+	    		<li>N key to create a new model</li>
+	    	</ul>
+	    </div>
+
+	    <div id="inspection">
+	    	<h3>How inspection mode works</h3>
+	    	<p><font size="3.5">You can change the mode from modelling to inspection by pressing <b>"I key"</b>. In inspection mode you can rotate the model about its centroid, you can tranlate the object along +ve and -ve x,y,z axes. The controls are mentioned below. By pressing <b>"R key"</b> the origin is moved to the centriod of the object.</font></p>
+	    	<ul>
+	    		<h4>Key controls</h4>
+	    		<li>Left,Right arrows to rotate about Y-axis</li>
+	    		<li>Up,Down arrows to rotate about X-axis</li>
+	    		<li>PgUp,PgDn to rotate about Z-axis</li>
+	    		<li>R key to move origin to centroid</li>
+	    		<li>W,A keys to tranlate along Y-axiz</li>
+	    		<li>A,D keys to tranlate along Z-axiz</li>
+	    		<li>Z,X keys to tranlate along Z-axiz</li>
+	    		<li>M key to change mode to modelling mode</li>
+	    		<li>N key to create a new model</li>
+	    	</ul>
+	    </div>
+
+
+	    <div id="new_functions">
+	    	<h3>New functions used</h3>
+	    	<ul>
+	    		<li>When N key is pressed the current model is removed and a blank screen is shown to create a new model</li>
+	    		
+			    <li><p>All the key and mouse events are handled in gl_framework.cpp and corresponding function in ass1_modelling.cpp is called. For save its save_buffer, for load its reload_buffer.</p></li>
+
+			    <li><p>The following code is used to use two different vbos and vaos for two models</p>
+			    <img src="./index_files/render_gl.jpg"></li>
+
+			    <li><p>To translate a model the following function is used</p>
+				<img src="./index_files/translate.jpg"></li>
+
+				<li><p>To detect mouse click and get the coordinates the following functions are used</p>
+				<img src="./index_files/mouse_cursor.jpg"></li>
+			</ul>
+		</div>
+
+	    <div id="assumption">
+	    	<h3>Assumptions</h3>
+	    	<p><font size="4">The following are the assumptions made as part of this assignment</font></p>
+	    	<ul>
+	    		<li>Program start with modelling mode</li>
+	    		<li>The model is shown when more than 2 vertices are clicked</li>
+	    		<li>Saving a raw file overwrites already existing raw file with same name</li>
+	    		<li>Raw file will be empty if you try to save a model with less than 3 vertices</li>
+	    		<li>File used to load is a valid raw file</li>
+	    		<li>Everytime we load a file the vertex/color data is stored in one vao and the new data is stored in a seperate vao </li>
+	    		<li>When we load a file the unsaved data of previous file is lost (no prompt is shown)</li>
+	    	</ul>
+	    </div>
+
+<img id="hzDownscaled" style="position: absolute; top: -10000px;"></body></html>

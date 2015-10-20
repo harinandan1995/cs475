@@ -1,0 +1,17 @@
+-------CS475 Assignment 1 README-------
+
+
+Link to report : http://www.cse.iitb.ac.in/~harikatam/cs475/assignment2
+References : 
+	www.cplusplus.com
+	http://prideout.net/blog/?cat=3
+	www.java-gaming.org
+	03_colorcube_rotate tutorial
+
+How to execute 
+type make in terminal
+type ./modelling <myscene.scn
+
+Team Members:
+Harinandan Teja 120050066
+Nishanth Rumandla 120050064

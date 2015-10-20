@@ -1,0 +1,81 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+		<title>CS475</title>
+		<link rel="icon" type="image/PNG" href="images/fevicon.jpg">
+	<body style="margin-left:120px;margin-top:40px;margin-right:120px">
+		<h1><center>Computer Graphics cs475</center></h1>
+		<h2><center>Assignment 2 report</center></h2>
+	    <div>
+	    	<h3>Team members</h3>	
+	    	<ul>
+	    		<li><a href="https://www.facebook.com/harinandan.teja">Harinandan Teja</a> 120050066</li>
+	    		<li><a href="https://www.facebook.com/nishanth.rumandla.77">Nishanth Rumandla</a> 120050064</li>
+	    	</ul>
+	    </div>
+
+	    <div>
+	    	<h3>Content</h3>
+	    	<ul>
+	    		<li><a href="#wcs">World Coordinate System</a></li>
+	    		<li><a href="#wcstovcs">WCS to VCS</a></li>
+	    		<li><a href="#vcstoccs">VCS to CCS</a></li>
+	    		<li><a href="#ccstondcs">CCS to NDCS</a></li>
+	    		<li><a href="#ndcstodcs">NDCS to DCS</a></li>
+	    		<li><a href="#controls">Controls</a></li>
+	    	</ul>
+	    </div>
+
+		<div id="wcs">
+	    	<h3>WCS</h3>
+	    	<p><font size="4">First we created the scene in world coordinate system (WCS) using four vaos, three for each object and one for frustum and eye. The scene looks as shown in the below figure</font></p>
+	    	<img src="images/wcs.png">
+	    </div>	    
+
+	    <div id="wcstovcs">
+	    	<h3>WCS to VCS</h3>
+	    	<p><font size="4">Next the scene is transformed from world coordinate system (WCS) to view coordinate system (VCS) on pressing key "1". In VCS the eye lies at the origin and lookat vector along negative z axis. First two image shows how the VCS coordinate axes are constructed and how the transformation is done from WCS to VCS. Last image shows the scene after transforming it into VCS</font></p>
+	    	<li><img src="images/wcstovcs.png"></li>
+	    	<li><img src="images/vcs_code.png"></li>
+	    	<li><img src="images/vcs.png"></li>
+	    </div>
+
+	    <div id="vcstoccs">
+	    	<h3>VCS to CCS</h3>
+	    	<p><font size="4">On pressing key "2" the scene is transformed from view coordinate system (VCS) to clipping coordinate system (CCS). The frustum is transformed into cube whose center lies at origin, farplane at +1 and nearplane at -1 along n axis. First image shows how the transformation is done from VCS to CCS. Last image shows the scene after transforming it into CCS</font></p>
+	    	<li><img src="images/vcstoccs.png"></li>
+	    	<li><img src="images/ccs.png"></li>
+	    </div>
+
+	    <div id="ccstondcs">
+	    	<h3>CCS to NDCS</h3>
+	    	<p><font size="4">On pressing key "3" the scene is transformed from clipping coordinate system (CCS) to normalized device coordinate system (NDCS). Here all the cordinates are divided by w, 
+	    	4th cordinate in homogenous system. First image shows how the transformation is applied on each vertex to normalize them. Last image shows the scene after transforming it into NDCS</font></p>
+	    	<li><img src="images/ccstondcs.png"></li>
+	    	<li><img src="images/ndcs.png"></li>
+	    </div>
+
+
+	    <div id="ndcstodcs">
+	    	<h3>NDCS to DCS</h3>
+	    	<p><font size="4">On pressing key "4" the scene is transformed from normalized device coordinate system (NDCS) to device coordinate system (DCS). Here all the cordinates are scaled according to the screen width and height which in this case are 40 and 40. First image shows how the transformation is applied on each vertex to make them adjust according to device width and height. Last image shows the scene after transforming it into DCS</font></p>
+	    	<li><img src="images/ndcstodcs.png"></li>
+	    	<li><img src="images/dcs.png"></li>
+		</div>
+
+	    <div id="controls">
+	    	<h3>Controls</h3>
+	    	<p><font size="4">The following are the controls used</font></p>
+	    	<ul>
+	    		<li>1 to transform from WCS to VCS</li>
+	    		<li>2 to transform from VCS to CCS</li>
+	    		<li>3 to transform from CCS to NDCS</li>
+	    		<li>4 to transform from NDCS to DCS</li>
+	    		<li>S, D to translate along X axis</li>
+	    		<li>W, A to translate along Y axis</li>
+	    		<li>Z, X to translate along Z axis</li>
+	    		<li>Up, Down to rotate about X axis</li>
+	    		<li>Left, Right to rotate about Y axis</li>
+	    		<li>PgUp, PgDown to roatate about Z axis</li>
+	    	</ul>
+	    </div>
+
+</body></html>
