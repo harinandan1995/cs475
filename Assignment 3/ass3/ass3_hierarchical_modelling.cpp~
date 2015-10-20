@@ -138,7 +138,7 @@ void load_scene(){
       if(i == num_objects-1) curr_node = node;
       node_list.push_back(node);
     }
-    //std::cout << tex_coords[0][0].x << std::endl;
+    std::cout << tex_coords[0][0].x << std::endl;
 }
 
 
